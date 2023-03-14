@@ -1,0 +1,308 @@
+{
+  "forgeCaps": [
+    1,
+    1,
+    1
+  ],
+  "exitsLocked": false,
+  "goldRatio": 1,
+  "minAmuletLevel": 7,
+  "aggressiveMobs": true,
+  "fountainLockLevel": 4,
+  "eliteExtraLife": 0.6,
+  "maxUpLevelForStartItems": 3,
+  "extraElitesPerLevel": 2,
+  "bossExtraLife": 0.7,
+  "id": "Hell",
+  "extraMobDensity": 0.1,
+  "carriedInfection": true,
+  "levelSettings": [
+    {
+      "mobAtkTier": 4,
+      "mobLifeTier": 6,
+      "level": "PrisonStart",
+      "extraAtkTiers": 4,
+      "extraLifeTier": 6
+    },
+    {
+      "mobAtkTier": 9,
+      "mobLifeTier": 12,
+      "level": "PrisonCourtyard",
+      "extraAtkTiers": 4,
+      "extraLifeTier": 4
+    },
+    {
+      "mobAtkTier": 15,
+      "mobLifeTier": 20,
+      "level": "PrisonDepths",
+      "extraAtkTiers": 1,
+      "extraLifeTier": 2
+    },
+    {
+      "mobAtkTier": 15,
+      "mobLifeTier": 20,
+      "level": "PrisonCorrupt",
+      "extraAtkTiers": 1,
+      "extraLifeTier": 2
+    },
+    {
+      "mobAtkTier": 10,
+      "mobLifeTier": 13,
+      "level": "SewerShort",
+      "extraAtkTiers": 4,
+      "extraLifeTier": 5
+    },
+    {
+      "mobAtkTier": 8,
+      "mobLifeTier": 12,
+      "level": "Greenhouse",
+      "extraAtkTiers": 4,
+      "extraLifeTier": 4
+    },
+    {
+      "mobAtkTier": 16,
+      "mobLifeTier": 18,
+      "level": "Ossuary",
+      "extraAtkTiers": 5,
+      "extraLifeTier": 5
+    },
+    {
+      "mobAtkTier": 16,
+      "mobLifeTier": 17,
+      "level": "PrisonRoof",
+      "extraAtkTiers": 5,
+      "extraLifeTier": 5
+    },
+    {
+      "mobAtkTier": 15,
+      "mobLifeTier": 18,
+      "level": "SewerDepths",
+      "extraAtkTiers": 6,
+      "extraLifeTier": 5
+    },
+    {
+      "mobAtkTier": 14,
+      "mobLifeTier": 17,
+      "level": "Swamp",
+      "extraAtkTiers": 6,
+      "extraLifeTier": 5
+    },
+    {
+      "mobAtkTier": 22,
+      "mobLifeTier": 25,
+      "level": "Bridge",
+      "extraAtkTiers": 0,
+      "extraLifeTier": 0
+    },
+    {
+      "mobAtkTier": 21,
+      "mobLifeTier": 25,
+      "level": "SwampHeart",
+      "extraAtkTiers": 0,
+      "extraLifeTier": 0
+    },
+    {
+      "mobAtkTier": 20,
+      "mobLifeTier": 23,
+      "level": "BeholderPit",
+      "extraAtkTiers": 0,
+      "extraLifeTier": 0
+    },
+    {
+      "mobAtkTier": 22,
+      "mobLifeTier": 25,
+      "level": "DeathArena",
+      "extraAtkTiers": 0,
+      "extraLifeTier": 0
+    },
+    {
+      "mobAtkTier": 22,
+      "mobLifeTier": 27,
+      "level": "StiltVillage",
+      "extraAtkTiers": 4,
+      "extraLifeTier": 4
+    },
+    {
+      "mobAtkTier": 21,
+      "mobLifeTier": 28,
+      "level": "AncientTemple",
+      "extraAtkTiers": 5,
+      "extraLifeTier": 4
+    },
+    {
+      "mobAtkTier": 22,
+      "mobLifeTier": 28,
+      "level": "Cemetery",
+      "extraAtkTiers": 5,
+      "extraLifeTier": 4
+    },
+    {
+      "mobAtkTier": 20,
+      "mobLifeTier": 24,
+      "level": "Tumulus",
+      "extraAtkTiers": 5,
+      "extraLifeTier": 4
+    },
+    {
+      "mobAtkTier": 29,
+      "mobLifeTier": 32,
+      "level": "ClockTower",
+      "extraAtkTiers": 3,
+      "extraLifeTier": 5
+    },
+    {
+      "mobAtkTier": 29,
+      "mobLifeTier": 32,
+      "level": "Crypt",
+      "extraAtkTiers": 3,
+      "extraLifeTier": 4
+    },
+    {
+      "mobAtkTier": 29,
+      "mobLifeTier": 32,
+      "level": "Cliff",
+      "extraAtkTiers": 3,
+      "extraLifeTier": 4
+    },
+    {
+      "mobAtkTier": 34,
+      "mobLifeTier": 40,
+      "level": "TopClockTower",
+      "extraAtkTiers": 0,
+      "extraLifeTier": 0
+    },
+    {
+      "mobAtkTier": 32,
+      "mobLifeTier": 42,
+      "level": "GardenerStage",
+      "extraAtkTiers": 0,
+      "extraLifeTier": 0
+    },
+    {
+      "mobAtkTier": 36,
+      "mobLifeTier": 44,
+      "level": "Lighthouse",
+      "extraAtkTiers": 0,
+      "extraLifeTier": 0
+    },
+    {
+      "mobAtkTier": 34,
+      "mobLifeTier": 42,
+      "level": "Shipwreck",
+      "extraAtkTiers": 3,
+      "extraLifeTier": 4
+    },
+    {
+      "mobAtkTier": 34,
+      "mobLifeTier": 42,
+      "level": "Castle",
+      "extraAtkTiers": 3,
+      "extraLifeTier": 4
+    },
+    {
+      "extraTiers": 4,
+      "mobTier": 40,
+      "mobAtkTier": 34,
+      "mobLifeTier": 42,
+      "level": "Distillery",
+      "extraAtkTiers": 3,
+      "extraLifeTier": 4
+    },
+    {
+      "mobAtkTier": 36,
+      "mobLifeTier": 44,
+      "level": "Throne",
+      "extraAtkTiers": 0,
+      "extraLifeTier": 0
+    },
+    {
+      "mobAtkTier": 38,
+      "mobLifeTier": 44,
+      "level": "QueenArena",
+      "extraAtkTiers": 0,
+      "extraLifeTier": 0
+    },
+    {
+      "mobAtkTier": 38,
+      "mobLifeTier": 44,
+      "level": "DookuArena",
+      "extraAtkTiers": 0,
+      "extraLifeTier": 0
+    },
+    {
+      "mobAtkTier": 30,
+      "mobLifeTier": 33,
+      "level": "Cavern",
+      "extraAtkTiers": 3,
+      "extraLifeTier": 4
+    },
+    {
+      "mobAtkTier": 33,
+      "mobLifeTier": 40,
+      "level": "Giant",
+      "extraAtkTiers": 0,
+      "extraLifeTier": 0
+    },
+    {
+      "mobAtkTier": 37,
+      "mobLifeTier": 46,
+      "level": "Astrolab",
+      "extraAtkTiers": 2,
+      "extraLifeTier": 2
+    },
+    {
+      "mobAtkTier": 38,
+      "mobLifeTier": 47,
+      "level": "Observatory",
+      "extraAtkTiers": 0,
+      "extraLifeTier": 0
+    },
+    {
+      "mobAtkTier": 3,
+      "mobLifeTier": 2,
+      "level": "Bank"
+    },
+    {
+      "mobAtkTier": 10,
+      "mobLifeTier": 13,
+      "level": "PurpleGarden",
+      "extraAtkTiers": 4,
+      "extraLifeTier": 5
+    },
+    {
+      "mobAtkTier": 15,
+      "mobLifeTier": 18,
+      "level": "DookuCastle",
+      "extraAtkTiers": 6,
+      "extraLifeTier": 5
+    },
+    {
+      "mobAtkTier": 34,
+      "mobLifeTier": 42,
+      "level": "DookuCastleHard",
+      "extraAtkTiers": 3,
+      "extraLifeTier": 4
+    },
+    {
+      "mobAtkTier": 4,
+      "mobLifeTier": 6,
+      "level": "RichterCastle",
+      "extraAtkTiers": 4,
+      "extraLifeTier": 6
+    }
+  ],
+  "icon": {
+    "x": 18,
+    "y": 9,
+    "file": "cardIcons.png",
+    "size": 24
+  },
+  "extraLootLevel": 3,
+  "difficultyLevel": 5,
+  "name": "Enfer",
+  "cellDropMultiplier": 1000,
+  "approxUpMobTierRatio": 1.3,
+  "__separator_group_ID": -1,
+  "__separator_group_Name": "",
+  "__original_Index": 5
+}

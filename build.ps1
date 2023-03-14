@@ -16,6 +16,11 @@ function UnpackAll {
 
 function PatchAll {
     Copy-Item -Path "patches\Normal.json" -Destination "build\castledb\difficulty\0---Normal.json" -Force
+    Copy-Item -Path "patches\Hard.json" -Destination "build\castledb\difficulty\1---Hard.json" -Force
+    Copy-Item -Path "patches\VeryHard.json" -Destination "build\castledb\difficulty\2---VeryHard.json" -Force
+    Copy-Item -Path "patches\Expert.json" -Destination "build\castledb\difficulty\3---Expert.json" -Force
+    Copy-Item -Path "patches\Nightmare.json" -Destination "build\castledb\difficulty\4---Nightmare.json" -Force
+    Copy-Item -Path "patches\Hell.json" -Destination "build\castledb\difficulty\5---Hell.json" -Force
     CDBTool.exe -Collapse -Indir "$(pwd)\build\castledb" -OutCdb "$(pwd)\build\unpacked\data.cdb"
 }
 
