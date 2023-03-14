@@ -1,0 +1,273 @@
+{
+  "forgeCaps": [
+    1,
+    0.5,
+    0
+  ],
+  "exitsLocked": false,
+  "goldRatio": 1,
+  "aggressiveMobs": false,
+  "fountainLockLevel": 0,
+  "eliteExtraLife": 0,
+  "maxUpLevelForStartItems": 1,
+  "extraElitesPerLevel": 0,
+  "bossExtraLife": 0,
+  "id": "Normal",
+  "extraMobDensity": 0,
+  "carriedInfection": false,
+  "levelSettings": [
+    {
+      "mobAtkTier": 1,
+      "level": "PrisonStart",
+      "extraAtkTiers": 2
+    },
+    {
+      "mobAtkTier": 3,
+      "level": "PrisonCourtyard",
+      "extraAtkTiers": 4
+    },
+    {
+      "mobAtkTier": 8,
+      "level": "PrisonDepths",
+      "extraAtkTiers": 1
+    },
+    {
+      "mobAtkTier": 8,
+      "level": "PrisonCorrupt",
+      "extraAtkTiers": 1
+    },
+    {
+      "mobAtkTier": 4,
+      "level": "SewerShort",
+      "extraAtkTiers": 3
+    },
+    {
+      "mobAtkTier": 3,
+      "level": "Greenhouse",
+      "extraAtkTiers": 3
+    },
+    {
+      "mobAtkTier": 7,
+      "level": "Ossuary",
+      "extraAtkTiers": 6
+    },
+    {
+      "mobAtkTier": 7,
+      "level": "PrisonRoof",
+      "extraAtkTiers": 6
+    },
+    {
+      "mobAtkTier": 6,
+      "level": "SewerDepths",
+      "extraAtkTiers": 7
+    },
+    {
+      "mobAtkTier": 6,
+      "level": "Swamp",
+      "extraAtkTiers": 6
+    },
+    {
+      "mobAtkTier": 13,
+      "level": "Bridge",
+      "extraAtkTiers": 0
+    },
+    {
+      "mobAtkTier": 12,
+      "level": "SwampHeart",
+      "extraAtkTiers": 0
+    },
+    {
+      "mobAtkTier": 11,
+      "level": "BeholderPit",
+      "extraAtkTiers": 0
+    },
+    {
+      "mobAtkTier": 13,
+      "level": "DeathArena",
+      "extraAtkTiers": 0
+    },
+    {
+      "mobAtkTier": 14,
+      "level": "StiltVillage",
+      "extraAtkTiers": 4
+    },
+    {
+      "mobAtkTier": 13,
+      "level": "AncientTemple",
+      "extraAtkTiers": 5
+    },
+    {
+      "mobAtkTier": 14,
+      "level": "Cemetery",
+      "extraAtkTiers": 5
+    },
+    {
+      "mobAtkTier": 12,
+      "mobLifeTier": 12,
+      "level": "Tumulus",
+      "extraAtkTiers": 4,
+      "extraLifeTier": 4
+    },
+    {
+      "mobAtkTier": 19,
+      "level": "ClockTower",
+      "extraAtkTiers": 4
+    },
+    {
+      "mobAtkTier": 19,
+      "level": "Crypt",
+      "extraAtkTiers": 4
+    },
+    {
+      "mobAtkTier": 19,
+      "level": "Cliff",
+      "extraAtkTiers": 4
+    },
+    {
+      "mobAtkTier": 27,
+      "level": "Lighthouse",
+      "extraAtkTiers": 0
+    },
+    {
+      "mobAtkTier": 22,
+      "level": "TopClockTower",
+      "extraAtkTiers": 0
+    },
+    {
+      "mobAtkTier": 22,
+      "level": "GardenerStage",
+      "extraAtkTiers": 0
+    },
+    {
+      "mobAtkTier": 24,
+      "level": "Shipwreck",
+      "extraAtkTiers": 3
+    },
+    {
+      "mobAtkTier": 24,
+      "level": "Castle",
+      "extraAtkTiers": 3
+    },
+    {
+      "extraTiers": 4,
+      "mobTier": 17,
+      "mobAtkTier": 24,
+      "level": "Distillery",
+      "extraAtkTiers": 3
+    },
+    {
+      "mobAtkTier": 27,
+      "level": "Throne",
+      "extraAtkTiers": 0
+    },
+    {
+      "mobAtkTier": 27,
+      "level": "QueenArena",
+      "extraAtkTiers": 0
+    },
+    {
+      "mobAtkTier": 27,
+      "mobLifeTier": 25,
+      "level": "DookuArena",
+      "extraAtkTiers": 0
+    },
+    {
+      "mobAtkTier": 20,
+      "level": "Cavern",
+      "extraAtkTiers": 4
+    },
+    {
+      "mobAtkTier": 21,
+      "level": "Giant",
+      "extraAtkTiers": 0
+    },
+    {
+      "mobAtkTier": 24,
+      "level": "Astrolab"
+    },
+    {
+      "mobAtkTier": 26,
+      "level": "Observatory",
+      "extraAtkTiers": 0
+    },
+    {
+      "mobAtkTier": 1,
+      "mobLifeTier": 0,
+      "level": "Bank"
+    },
+    {
+      "mobAtkTier": 4,
+      "level": "PurpleGarden",
+      "extraAtkTiers": 3
+    },
+    {
+      "mobAtkTier": 6,
+      "level": "DookuCastle",
+      "extraAtkTiers": 7
+    },
+    {
+      "mobAtkTier": 24,
+      "level": "DookuCastleHard",
+      "extraAtkTiers": 3
+    },
+    {
+      "mobAtkTier": 1,
+      "level": "RichterCastle",
+      "extraAtkTiers": 2
+    },
+    {
+      "mobAtkTier": 2,
+      "level": "S_PrisonStart",
+      "extraAtkTiers": 4
+    },
+    {
+      "mobAtkTier": 2,
+      "level": "S_PrisonDepths",
+      "extraAtkTiers": 4
+    },
+    {
+      "mobAtkTier": 2,
+      "level": "S_Ossuary",
+      "extraAtkTiers": 4
+    },
+    {
+      "mobAtkTier": 2,
+      "level": "S_SewerShort",
+      "extraAtkTiers": 4
+    },
+    {
+      "mobAtkTier": 2,
+      "level": "S_SewerDepths",
+      "extraAtkTiers": 4
+    },
+    {
+      "mobAtkTier": 2,
+      "level": "S_AncientTemple",
+      "extraAtkTiers": 4
+    },
+    {
+      "mobAtkTier": 2,
+      "level": "S_AncientTempleAlt",
+      "extraAtkTiers": 4
+    },
+    {
+      "mobAtkTier": 2,
+      "level": "S_Castle",
+      "extraAtkTiers": 4
+    }
+  ],
+  "icon": {
+    "x": 10,
+    "y": 11,
+    "file": "cardIcons.png",
+    "size": 24
+  },
+  "extraLootLevel": 0,
+  "difficultyLevel": 0,
+  "name": "Normal",
+  "cellDropMultiplier": 1000,
+  "approxUpMobTierRatio": 0.85,
+  "__separator_group_ID": -1,
+  "__separator_group_Name": "",
+  "__original_Index": 0
+}
