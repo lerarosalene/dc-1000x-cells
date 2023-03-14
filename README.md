@@ -1,5 +1,7 @@
 ## Dead Cells Mod: 1000x cells
 
+<img src="https://raw.githubusercontent.com/lerarosalene/dc-1000x-cells/06745eacee5161d132d189f3c15d4888dabaaa5f/metadata/preview.jpg" width="600" />
+
 Download and install via [steam workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2946989101).
 
 This mod changes cell drop multiplier for all difficulties to 1000x 
