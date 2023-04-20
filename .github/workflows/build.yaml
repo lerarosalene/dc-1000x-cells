@@ -2,7 +2,7 @@ name: Build Mod
 on:
   push:
     branches:
-      - main
+      - release/**
 
 jobs:
   build:
@@ -80,7 +80,10 @@ jobs:
         shell: pwsh
         run: |
           $GITHUB_SHA = $env:GITHUB_SHA
-          gh release create "update/$GITHUB_SHA" --notes $GITHUB_SHA --target $GITHUB_SHA ..\dc-1000x-cells.zip
+          $BRANCH = $(git rev-parse --abbrev-ref HEAD)
+          $BRANCH -match "release/(.*)$"
+          $VERSION = $matches[1]
+          gh release create $VERSION --notes $VERSION --target $GITHUB_SHA ..\dc-1000x-cells.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GH_RELEASE_TOKEN }}
         working-directory: dc-1000x-cells
