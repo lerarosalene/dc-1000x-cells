@@ -56,10 +56,4 @@ jobs:
           SSFN_FILE_NAME: ${{ secrets.SSFN_FILE_NAME }}
           SSFN_FILE_CONTENTS: ${{ secrets.SSFN_FILE_CONTENTS }}
           CONFIG_VDF_CONTENTS: ${{ secrets.CONFIG_VDF_CONTENTS }}
-      - name: Clean Up
-        shell: pwsh
-        if: steps.steamcmd-prepare.outcome == 'success'
-        run: |
-          Remove-Item -Recurse -Force $env:STEAMDIR
-        env:
-          STEAMDIR: ${{ steps.steamcmd-prepare.outputs.steamdir }}
+
