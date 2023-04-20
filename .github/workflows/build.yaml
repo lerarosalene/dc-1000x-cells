@@ -48,6 +48,8 @@ jobs:
             "+login" "$STEAM_ACCOUNT_NAME" `
             "+app_update" 588650 `
             "+quit"
+
+          exit 0
         env:
           STEAMDIR: ${{ steps.steamcmd-prepare.outputs.steamdir }}
           STEAM_ACCOUNT_NAME: ${{ secrets.STEAM_ACCOUNT_NAME }}
