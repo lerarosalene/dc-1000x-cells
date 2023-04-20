@@ -79,7 +79,8 @@ jobs:
       - name: Release
         shell: pwsh
         run: |
-          gh release create "update/$GITHUB_SHA" --notes $GITHUB_SHA --target $GITHUB_SHA dc-1000x-cells.zip
+          gh release create "update/$GITHUB_SHA" --notes $GITHUB_SHA --target $GITHUB_SHA ..\dc-1000x-cells.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        working-directory: dc-1000x-cells
 
