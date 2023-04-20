@@ -28,8 +28,8 @@ jobs:
         with:
           path: dead-cells
           key: dead-cells
-          restore-keys:
-            - dead-cells-
+          restore-keys: |
+            dead-cells-
       - name: Install Dead Cells
         shell: pwsh
         run: |
