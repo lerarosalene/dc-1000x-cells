@@ -23,11 +23,13 @@ jobs:
           New-Item -ItemType Directory $FULL_PATH
           New-Item -ItemType Directory dead-cells
           echo "steamdir=$FULL_PATH" >> $env:GITHUB_OUTPUT
-      - name: Dead Cells Cache
-        uses: actions/cache@v3
+      - name: Dead Cells Cache Restore
+        uses: actions/cache/restore@v3
         with:
           path: dead-cells
           key: dead-cells
+          restore-keys:
+            - dead-cells-
       - name: Install Dead Cells
         shell: pwsh
         run: |
@@ -59,6 +61,11 @@ jobs:
           SSFN_FILE_NAME: ${{ secrets.SSFN_FILE_NAME }}
           SSFN_FILE_CONTENTS: ${{ secrets.SSFN_FILE_CONTENTS }}
           CONFIG_VDF_CONTENTS: ${{ secrets.CONFIG_VDF_CONTENTS }}
+      - name: Dead Cells Cache Save
+        uses: actions/cache/save@v3
+        with:
+          path: dead-cells
+          key: dead-cells-${{ hashfiles(dead-cells/res.pak, dead-cells/ModTools/**/*.exe) }}
       - name: Build
         shell: pwsh
         run: |
@@ -69,8 +76,10 @@ jobs:
         env:
           INSTALL_DIR: ${{ github.workspace }}\dead-cells
         working-directory: dc-1000x-cells
-      - uses: ncipollo/release-action@v1
-        with:
-          artifacts: "dc-1000x-cells.zip"
-          tag: update/${{ github.sha }}
-          commit: ${{ github.sha }}
+      - name: Release
+        shell: pwsh
+        run: |
+          gh release create "update/$GITHUB_SHA" --notes $GITHUB_SHA --target $GITHUB_SHA dc-1000x-cells.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
