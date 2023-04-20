@@ -51,7 +51,7 @@ jobs:
             "+app_update" 588650 `
             "+quit"
 
-          echo "$STEAMDIR\steamcmd\logs\stderr.txt"
+          cat "$STEAMDIR\steamcmd\logs\stderr.txt"
         env:
           STEAMDIR: ${{ steps.steamcmd-prepare.outputs.steamdir }}
           STEAM_ACCOUT_NAME: ${{ secrets.STEAM_ACCOUNT_NAME }}
