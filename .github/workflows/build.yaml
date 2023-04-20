@@ -65,7 +65,7 @@ jobs:
         uses: actions/cache/save@v3
         with:
           path: dead-cells
-          key: dead-cells-${{ hashfiles(dead-cells/res.pak, dead-cells/ModTools/**/*.exe) }}
+          key: dead-cells-${{ hashfiles('dead-cells/res.pak', 'dead-cells/ModTools/**/*.exe') }}
       - name: Build
         shell: pwsh
         run: |
