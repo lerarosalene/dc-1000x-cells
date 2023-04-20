@@ -1,0 +1,63 @@
+name: Build Mod
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: build
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Create SteamCmd Directory
+        id: steamcmd-prepare
+        shell: pwsh
+        run: |
+          $TMP_DIR = [System.IO.Path]::GetTempPath()
+          [string] $NAME = [System.Guid]::NewGuid()
+          $FULL_PATH = Join-Path $TMP_DIR $NAME
+          New-Item -ItemType Directory $FULL_PATH
+          New-Item -ItemType Directory "$FULL_PATH\dead-cells"
+          echo "steamdir=$FULL_PATH" >> $env:GITHUB_OUTPUT
+      - name: Dead Cells Cache
+        uses: actions/cache@v3
+        with:
+          path: "${{ steps.steamcmd-prepare.outputs.steamdir }}\\dead-cells"
+          key: dead-cells
+      - name: Install Dead Cells
+        shell: pwsh
+        run: |
+          $SSFN_FILE_NAME = $env:SSFN_FILE_NAME
+          $SSFN_FILE_CONTENTS = [System.Convert]::FromBase64String($env:SSFN_FILE_CONTENTS)
+          $CONFIG_VDF_CONTENTS = [System.Convert]::FromBase64String($env:CONFIG_VDF_CONTENTS)
+          $STEAMDIR = $env:STEAMDIR
+          $STEAM_ACCOUNT_NAME = $env:STEAM_ACCOUNT_NAME
+
+          Invoke-WebRequest `
+            -Uri "https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip" `
+            -OutFile "$STEAMDIR\steamcmd.zip"
+          Expand-Archive -Path "$STEAMDIR\steamcmd.zip" -DestinationPath "$STEAMDIR\steamcmd"
+
+          [IO.File]::WriteAllBytes("$STEAMDIR\steamcmd\$SSFN_FILE_NAME", $SSFN_FILE_CONTENTS)
+          New-Item -ItemType Directory -Path "$STEAMDIR\steamcmd\config"
+          [IO.File]::WriteAllBytes("$STEAMDIR\steamcmd\config\config.vdf", $CONFIG_VDF_CONTENTS)
+
+          & "$STEAMDIR\steamcmd\steamcmd.exe" `
+            "+force_install_dir" "$STEAMDIR\dead-cells" `
+            "+login" "$STEAM_ACCOUNT_NAME" `
+            "+app_update" 588650 `
+            "+quit"
+        env:
+          STEAMDIR: "${{ steps.steamcmd-prepare.outputs.steamdir }}"
+          STEAM_ACCOUT_NAME: "${{ secrets.STEAM_ACCOUNT_NAME }}"
+          SSFN_FILE_NAME: "${{ secrets.SSFN_FILE_NAME }}"
+          SSFN_FILE_CONTENTS: "${{ secrets.SSFN_FILE_CONTENTS }}"
+          CONFIG_VDF_CONTENTS: "${{ secrets.CONFIG_VDF_CONTENTS }}"
+      - name: Clean Up
+        shell: pwsh
+        if: steps.steamcmd-prepare.outcome == 'success'
+        run: |
+          Remove-Item -Recurse -Force $env:STEAMDIR
+        env:
+          STEAMDIR: "${{ steps.steamcmd-prepare.outputs.steamdir }}"
