@@ -28,8 +28,6 @@ jobs:
       - name: Install Dead Cells
         shell: pwsh
         run: |
-          $ErrorActionPreference = 'SilentlyContinue'
-
           $SSFN_FILE_NAME = $env:SSFN_FILE_NAME
           $SSFN_FILE_CONTENTS = [System.Convert]::FromBase64String($env:SSFN_FILE_CONTENTS)
           $CONFIG_VDF_CONTENTS = [System.Convert]::FromBase64String($env:CONFIG_VDF_CONTENTS)
@@ -50,11 +48,9 @@ jobs:
             "+login" "$STEAM_ACCOUNT_NAME" `
             "+app_update" 588650 `
             "+quit"
-
-          cat "$STEAMDIR\steamcmd\logs\stderr.txt"
         env:
           STEAMDIR: ${{ steps.steamcmd-prepare.outputs.steamdir }}
-          STEAM_ACCOUT_NAME: ${{ secrets.STEAM_ACCOUNT_NAME }}
+          STEAM_ACCOUNT_NAME: ${{ secrets.STEAM_ACCOUNT_NAME }}
           SSFN_FILE_NAME: ${{ secrets.SSFN_FILE_NAME }}
           SSFN_FILE_CONTENTS: ${{ secrets.SSFN_FILE_CONTENTS }}
           CONFIG_VDF_CONTENTS: ${{ secrets.CONFIG_VDF_CONTENTS }}
