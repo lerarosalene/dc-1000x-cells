@@ -2,7 +2,10 @@ param(
     [string] $Target = "build"
 )
 
-$InstallDir = "C:\Program Files (x86)\Steam\steamapps\common\Dead Cells"
+$InstallDir = $env:INSTALL_DIR 
+if (-not $InstallDir) {
+  $InstallDir = "C:\Program Files (x86)\Steam\steamapps\common\Dead Cells"
+}
 
 function UnpackAll {
     param(

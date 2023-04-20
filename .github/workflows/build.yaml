@@ -10,6 +10,9 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          path:
+            dc-1000x-cells
       - name: Create SteamCmd Directory
         id: steamcmd-prepare
         shell: pwsh
@@ -18,12 +21,12 @@ jobs:
           [string] $NAME = [System.Guid]::NewGuid()
           $FULL_PATH = Join-Path $TMP_DIR $NAME
           New-Item -ItemType Directory $FULL_PATH
-          New-Item -ItemType Directory "$FULL_PATH\dead-cells"
+          New-Item -ItemType Directory dead-cells
           echo "steamdir=$FULL_PATH" >> $env:GITHUB_OUTPUT
       - name: Dead Cells Cache
         uses: actions/cache@v3
         with:
-          path: "${{ steps.steamcmd-prepare.outputs.steamdir }}\\dead-cells"
+          path: dead-cells
           key: dead-cells
       - name: Install Dead Cells
         shell: pwsh
@@ -44,7 +47,7 @@ jobs:
           [IO.File]::WriteAllBytes("$STEAMDIR\steamcmd\config\config.vdf", $CONFIG_VDF_CONTENTS)
 
           & "$STEAMDIR\steamcmd\steamcmd.exe" `
-            "+force_install_dir" "$STEAMDIR\dead-cells" `
+            "+force_install_dir" "$(pwd)\dead-cells" `
             "+login" "$STEAM_ACCOUNT_NAME" `
             "+app_update" 588650 `
             "+quit"
@@ -56,4 +59,18 @@ jobs:
           SSFN_FILE_NAME: ${{ secrets.SSFN_FILE_NAME }}
           SSFN_FILE_CONTENTS: ${{ secrets.SSFN_FILE_CONTENTS }}
           CONFIG_VDF_CONTENTS: ${{ secrets.CONFIG_VDF_CONTENTS }}
-
+      - name: Build
+        shell: pwsh
+        run: |
+          $env:PATH = "$env:PATH;$env:INSTALL_DIR\ModTools;$env:INSTALL_DIR\ModTools\TmxTool"
+          powershell -File build.ps1
+          powershell -File build.ps1 pub
+          Compress-Archive -Path publish\* -DestinationPath ..\dc-1000x-cells.zip
+        env:
+          INSTALL_DIR: ${{ github.workspace }}\dead-cells
+        working-directory: dc-1000x-cells
+      - uses: ncipollo/release-action@v1
+        with:
+          artifacts: "dc-1000x-cells.zip"
+          tag: update/${{ github.sha }}
+          commit: ${{ github.sha }}
