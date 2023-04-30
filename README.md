@@ -6,7 +6,7 @@ Download and install via [steam workshop](https://steamcommunity.com/sharedfiles
 
 This mod changes cell drop multiplier for all difficulties to 1000x 
 
-Last compatibility check: 3.2
+Last compatibility check: 3.4
 
 ## Build it yourself
 
